@@ -1,0 +1,372 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+/* 오른쪽 페이지바 */
+.right_page {
+    top: calc(100% / 2 - 60px);
+    position: fixed;
+    height: auto;
+    right: 10px;
+    z-index: 50;
+}
+
+.right_page li {
+    list-style-type: none;
+    width: 8px;
+    height: 8px;
+    background-color: brown;
+    border-radius: 4px;
+    margin: 20px 15px;
+    transition: 0.3s ease;
+    
+}
+
+.right_page li.active {
+    background-color: yellow;
+}
+/* 오른쪽 페이지바 */
+
+/* 상단메뉴바 */
+.top_navbar{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 50;
+    width: 390px;
+    height: 15px;
+    background: #fff;
+    opacity:80%;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.top_navbar li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.top_navbar li a{
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 20px;
+}
+/* 상단메뉴바 */
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+}
+
+#sec1 p {
+    font-size: 120px;
+    font-family: 'Protest Riot', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    
+}
+.animate__backInLeft{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+.animate__backInRight{
+    position: absolute;
+    top: 35%;
+    right: 15%;
+}
+#sec1 {
+    background-color: rgb(255, 153, 153);
+    flex-direction: column;
+    position: relative;
+    flex-wrap: wrap;
+}
+/* 마우스 스크롤 모양 */
+.mouseDown {
+    font-size: 0.9em; /* CONTROL MOUSE SIZE */
+    border: 3px solid rgba(255,255,255,1);
+    display: block;
+    width: 1.7em;
+    height: 2.8em;
+    border-radius: 0.9em;
+    margin: 0 auto;
+    text-decoration: none;
+    transition: border 0.2s ease-out;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+  }
+  
+  .mouseDown:hover {border: 2px solid rgba(255,255,255,0.7);}
+  
+  .mouseDown span {
+    display: block;
+    background: #fff;
+    width: 0.2em;
+    height: 0.3em;
+    margin: 0.7em auto 0;
+    border-radius: 0.4em;
+  }
+  
+  .mouseDown span {
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+    animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+  }
+  
+  .mouseDown:hover span {
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+  }
+  
+  @-webkit-keyframes scroll {
+    0%, 20% {
+      -webkit-transform: translateY(0) scaleY(1);
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(1.2em) scaleY(1.5);
+      opacity: 0.01;
+    }
+  }
+  
+  @keyframes scroll {
+    0%, 20% {
+      transform: translateY(0) scaleY(1);
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(1.2em) scaleY(1.5);
+      opacity: 0.01;
+    }
+  }
+  /* 마우스 스크롤 모양 */
+
+
+  /* profile */
+#sec2 {
+    background-color: rgb(153, 204, 255);
+    position: relative;
+}
+.bg { 
+    width: 770px; height: 660px; 
+    background: #ccc;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    opacity: 30%;
+}
+.container { 
+    width:100%; height: 100%;  
+    display: flex;
+    justify-content: space-evenly; 
+    position:relative;
+}
+
+.profile_left{
+    display: flex;
+    flex-flow: column nowrap;
+   
+}
+.profile_left h1{
+    padding-top: 70px;
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 50px;
+}
+figure {
+    --c: 50px;
+    --p: 30px;
+    --d: 10px;
+    background: red;
+    display: inline-block;
+    padding: var(--p);
+    background:
+      radial-gradient(farthest-side at 0 0, #000, #0000) 0 0 / var(--c) var(--c),
+      radial-gradient(farthest-side at 100% 100%, #000, #0000) 100% 100% / var(--c) var(--c),
+      linear-gradient(#fff 0 0) 50% 50% / calc(100% - var(--p)) calc(100% - var(--p)),
+      linear-gradient(#0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--p)) calc(100% - var(--d)),
+      linear-gradient(90deg, #0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--d)) calc(100% - var(--p)),
+      radial-gradient(farthest-side at 0 100%, #00000018, #0000) calc(100% - var(--d) * 0.5) calc(var(--d) * 0.5) / var(--d) var(--d),
+      radial-gradient(farthest-side at 100% 0, #00000018, #0000) calc(var(--d) * 0.5) calc(100% - var(--d) * 0.5) / var(--d) var(--d)
+      ;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 var(--c), var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%);
+  }
+.jungyeon {
+    width: 430px; height: 500px;
+    overflow: hidden;
+}
+.jungyeon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+
+}
+.profile_right { 
+    width: 635px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.profile_right h2 {
+    font-size: 3.2rem;
+    color: #266C9F;
+    font-family: 'Do Hyeon', sans-serif;
+    
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 15px;
+    border: 1px solid #fff;
+    background: #fff;
+    width: 120px;
+    height: 30px;
+    line-height: 45px;
+    border-top-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+}
+.profile_right .all {
+    display: flex;
+    justify-content: space-between;
+}
+.aboutme ul > li {
+    display: flex;
+    padding-bottom:24px ;
+}
+.aboutme> h3,
+.certificare > h3,
+.education >h3,
+.experience>h3,
+.skill>h3
+{
+    color: #266C9F;
+}
+.aboutme ul > li > p {
+    padding-right:20px ;
+    font-weight: 600;
+    margin: 0;
+}
+.certificare ul > li > span ,
+.education ul > li > span,
+.experience ul > li > span
+{
+   font-weight: 600;
+}
+.skill ul {
+    display: flex;
+    flex-flow: row nowrap;
+    
+}
+.skill ul li{
+    margin: 0 10px;
+}
+.skill ul li img{
+    width: 50px;
+    height: 50px;
+}
+ /* profile */
+
+ /* project-web */
+#sec3 {
+    background-color: rgb(255, 153, 102);
+    position: relative;
+}
+.container2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.container2 h1 { 
+    padding-top: 70px;
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 50px;
+    margin-left: 70px;
+}
+.project_box{
+    
+    display: flex;
+    justify-content: space-between;
+  
+}
+.project_right{
+    margin-left: 50px;
+}
+.project_left img{
+    width: 480px;
+    height: 300px;
+}
+.project_right_txt dl{
+    display: flex;
+}
+.project_right_txt dl dt{
+    
+    width: 110px;
+   
+}
+.btn{
+    width: 160px;
+    height: 50px;
+    background: rgb(255, 153, 102);
+    border-radius: 15px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 30px;
+}
+.btn:hover{
+    border: 2px solid rgb(255, 153, 102);
+    background: #fff;
+}
+.btn:hover a{
+    color: rgb(255, 153, 102);
+}
+.btn a {
+    text-align: center;
+}
+/* swiper */
+
+.swiper{
+    width: 90%;
+    height: 450px;
+}
+.swiper-slide {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+  }
+
+  .swiper-button-next{
+    color: rgb(255, 153, 102);
+  }
+  .swiper-button-prev{
+    color: rgb(255, 153, 102);
+  }
+
+ 
+/* swiper */
+/* project-web */
