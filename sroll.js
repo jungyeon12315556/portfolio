@@ -4,7 +4,11 @@ $(document).ready(function () {
     var pageCount = $(".section").length;
     var swipe = document.getElementsByTagName('.section');
 
+    function isMobile() {
+        return window.innerWidth <= 767; // 현재 화면 너비가 767px 이하인지 확인
+    }
     $(document).on('mousewheel DOMMouseScroll', function (event) {
+        if (isMobile()) return; 
         event.preventDefault();
         if (delay) return;
         delay = true;
@@ -35,3 +39,4 @@ $(document).ready(function () {
         }
     });
 });  
+
