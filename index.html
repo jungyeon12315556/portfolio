@@ -9,7 +9,7 @@
     <script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- 애니메이션 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- 구글웹폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,21 +26,23 @@
 </head>
 
 <body>
-    <nav>
+
         <ul class="top_navbar">
             <li><a href="#sec1">HOME</a></li>
             <li><a href="#sec2">PROFILE</a></li>
             <li><a href="#sec3">PROJECT-WEB</li></a>
         </ul>
-    </nav>
+
     <ul class="right_page">
         <li id="tag1" class="active"></li>
         <li id="tag2"></li>
         <li id="tag3"></li>
     </ul>
     <div class="section" id="sec1">
-        <p class="animate__animated animate__backInLeft">JungYeon's</p>
-        <p class="animate__animated animate__backInRight animate__delay-1s">PORTFOLIO</p>
+        <div class="main_title">
+            <p class="animate__animated animate__fadeInDown">JungYeon's</p>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">PORTFOLIO</p>
+        </div>
         <a class="mouseDown" href="#sec2" title="Scroll Down"><span></span>
         </a>
     </div>
@@ -89,6 +91,15 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="skill">
+                            <h3>SKILL</h3>
+                            <ul>
+                                <li><img src="img/html_03.png" alt="icon-html"></li>
+                                <li><img src="img/css_04.png" alt="icon-css"></li>
+                                <li><img src="img/js_05.png" alt="icon-js"></li>
+        
+                            </ul>
+                        </li>
                     </ul>
                     <ul class="right">
                         <li class="education">
@@ -108,6 +119,10 @@
                             <h3>EXPERIENCE</h3>
                             <ul>
                                 <li>
+                                    <p>2024.03 ~ 2025.02</p>
+                                    <span>케이먼트코퍼레이션 웹에이전시 근무</span>
+                                </li>
+                                <li>
                                     <p>2021.06 ~ 2023.06 , 2018.03 ~ 2020.03</p>
                                     <span>KB캐피탈 오토집중화팀 근무</span>
                                 </li>
@@ -117,15 +132,6 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul>
-                </div>
-                <div class="skill">
-                    <h3>SKILL</h3>
-                    <ul>
-                        <li><img src="img/html_03.png" alt="icon-html"></li>
-                        <li><img src="img/css_04.png" alt="icon-css"></li>
-                        <li><img src="img/js_05.png" alt="icon-js"></li>
-
                     </ul>
                 </div>
             </div>
@@ -138,6 +144,34 @@
 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <div class="project_box">
+                        <div class="project_left"><img src="img/ADLV.png" alt="tiffanyandco_project-img"></div>
+                        <div class="project_right">
+                            <h3>아크메드라비</h3>
+                            <p>카페24 쇼핑몰호스팅(스마트디자인 웹+모바일)</p>
+                            <div class="project_right_txt">
+                                <dl>
+                                    <dt><b>데모버전 제작 기간 :</b></dt>
+                                    <dd>3주, 개인 100%</dd>
+                                </dl>
+                                <dl>
+                                    <dt><b>역할 :</b></dt>
+                                    <dd>웹 퍼블리싱 담당 (디자인 시안을 기반으로 퍼블리싱 작업 수행)</dd>
+                                </dl>
+                                <dl>
+                                    <dt><b>사용 프로그램 :</b></dt>
+                                    <dd> HTML, CSS, JavaScript, jQuery ,카페24내 기능 활용</dd>
+                                </dl>
+                            </div>
+                            <div class="btn_area">
+                            <div class="btn2"><a href="https://ecudemo336527.cafe24.com/skin-skin1" target="_blank">PC버전 데모</a></div>
+                            <div class="btn2"><a href="https://ecudemo336527.cafe24.com/skin-mobile1p" target="_blank">모바일버전 데모</a></div>
+                            <div class="btn"><a href="https://acmedelavie.com" target="_blank">운영 사이트</a></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
                     <div class="swiper-slide">
                         <div class="project_box">
                             <div class="project_left"><img src="img/tiffanyandco.png" alt="tiffanyandco_project-img"></div>
@@ -155,14 +189,16 @@
                                     </dl>
                                     <dl>
                                         <dt><b>사용 프로그램 :</b></dt>
-                                        <dd>HTML5, CSS3, Javascript</dd>
+                                        <dd> HTML, CSS, JavaScript, jQuery</dd>
                                     </dl>
                                 </div>
-                                <div class="btn"><a href="https://jungyeon-tiffanyandco.netlify.app" target="_blank">프로젝트 결과 보기</a></div>
+                                <div class="btn_area">
+                                <div class="btn"><a href="https://jungyeon-tiffanyandco.netlify.app" target="_blank">프로젝트 결과 보기</a></div></div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    
+                    <!-- <div class="swiper-slide">
                         <div class="project_box">
                             <div class="project_left"><img src="img/chzzk.png" alt="chzzk_project-img"></div>
                             <div class="project_right">
@@ -209,7 +245,7 @@
                                 <div class="btn"><a href="https://jungyeon-heritagefloss.netlify.app" target="_blank">프로젝트 결과 보기</a></div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
